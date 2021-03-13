@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:geolocator/geolocator.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:latlng/latlng.dart';
+import 'package:shehacks_team_055/mainfunctionality/safetytips.dart';
 import 'package:shehacks_team_055/screens/appBar.dart';
 import 'package:shehacks_team_055/screens/auth.dart';
 import 'package:shehacks_team_055/screens/constants.dart';
@@ -377,6 +378,10 @@ class _HomePageState extends State<HomePage> {
                 ),
               ),
               GestureDetector(
+                onTap: () {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => SafetyTips()));
+                },
                 child: Container(
                   decoration: BoxDecoration(
                     color: Colors.white,
