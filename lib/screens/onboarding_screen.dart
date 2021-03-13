@@ -54,14 +54,19 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
             ],
           )),
           child: Padding(
-            padding: EdgeInsets.symmetric(vertical: 10.0),
+            padding: EdgeInsets.symmetric(vertical: 20.0),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.stretch,
               children: <Widget>[
                 Container(
                   alignment: Alignment.centerRight,
                   child: FlatButton(
-                    onPressed: () => print('Skip'),
+                    onPressed: () {
+                      Navigator.pushReplacement(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => SignupScreen()));
+                    },
                     child: Text(
                       'Skip',
                       style: TextStyle(color: Colors.white, fontSize: 15.0),
