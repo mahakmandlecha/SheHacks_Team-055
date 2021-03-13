@@ -8,13 +8,13 @@ class AppLogo extends StatelessWidget {
         style: TextStyle(fontSize: 22),
         children: <TextSpan>[
           TextSpan(
-              text: 'Plasma',
+              text: 'She',
               style: TextStyle(
-                  fontWeight: FontWeight.w600, color: Colors.black54)),
+                  fontWeight: FontWeight.w600, color: Colors.black87)),
           TextSpan(
-              text: 'Donor',
-              style: TextStyle(
-                  fontWeight: FontWeight.w600, color: Colors.amberAccent[700])),
+              text: 'Safe',
+              style:
+                  TextStyle(fontWeight: FontWeight.w600, color: Colors.white)),
         ],
       ),
     );
