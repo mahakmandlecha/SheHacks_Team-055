@@ -23,16 +23,8 @@ class _RegisterPageState extends State<RegisterPage> {
   String _phoneNumber;
   String _address;
   String _name;
-  List<String> _availability = ['Yes', 'No'];
-  String _availabilitySelected = '';
-  List<String> _gender = ['Male', 'Female'];
-  String _genderSelected = '';
+  String _emergency;
 
-  bool _availabilityCategorySelected = false;
-  List<String> _bloodGroup = ['A+', 'A-', 'B+', 'B-', 'O+', 'O-', 'AB+', 'AB-'];
-  String _bloodGroupSelected = '';
-  bool _categorySelected = false;
-  bool _genderCategorySelected = false;
   bool isLoggedIn() {
     if (FirebaseAuth.instance.currentUser != null) {
       return true;
@@ -78,11 +70,9 @@ class _RegisterPageState extends State<RegisterPage> {
           'uid': user.uid,
           'name': _name,
           'email': _email,
-          'bloodgroup': _bloodGroupSelected,
-          'availability': _availabilitySelected,
           'mobile-number': _phoneNumber,
           'address': _address,
-          'gender': _genderSelected,
+          'Emergency-number': _emergency,
         };
         addData(UserDetails).then((result) {
           print("User Added");
@@ -223,125 +213,20 @@ class _RegisterPageState extends State<RegisterPage> {
                         onSaved: (value) => _phoneNumber = value,
                       ),
                     ),
-                    Container(
-                      child: Column(
-                        children: <Widget>[
-                          Container(
-                            padding: EdgeInsets.only(top: 20.0),
-                            child: DropdownButton(
-                              hint: Text(
-                                'Choose Blood Group',
-                                style: TextStyle(color: Colors.black),
-                              ),
-                              iconSize: 40.0,
-                              items: _bloodGroup.map((val) {
-                                return new DropdownMenuItem<String>(
-                                  value: val,
-                                  child: new Text(val),
-                                );
-                              }).toList(),
-                              onChanged: (newValue) {
-                                setState(() {
-                                  _bloodGroupSelected = newValue;
-                                  this._categorySelected = true;
-                                });
-                              },
-                            ),
+                    Padding(
+                      padding: const EdgeInsets.all(18.0),
+                      child: TextFormField(
+                        keyboardType: TextInputType.phone,
+                        decoration: InputDecoration(
+                          hintText: 'Emergency Contact.',
+                          icon: Icon(
+                            FontAwesomeIcons.phone,
+                            color: Colors.amberAccent[700],
                           ),
-                          SizedBox(
-                            height: 10.0,
-                          ),
-                          Text(
-                            _bloodGroupSelected,
-                            style: TextStyle(
-                              fontWeight: FontWeight.bold,
-                              fontSize: 20.0,
-                              color: Colors.amberAccent[700],
-                            ),
-                          ),
-                        ],
-                      ),
-                    ),
-                    Container(
-                      child: Column(
-                        children: <Widget>[
-                          Container(
-                            padding: EdgeInsets.only(top: 20.0),
-                            child: DropdownButton(
-                              hint: Text(
-                                'Are you available',
-                                style: TextStyle(
-                                  color: Colors.black,
-                                ),
-                              ),
-                              iconSize: 40.0,
-                              items: _availability.map((val) {
-                                return new DropdownMenuItem<String>(
-                                  value: val,
-                                  child: new Text(val),
-                                );
-                              }).toList(),
-                              onChanged: (newValue) {
-                                setState(() {
-                                  _availabilitySelected = newValue;
-                                  this._availabilityCategorySelected = true;
-                                });
-                              },
-                            ),
-                          ),
-                          SizedBox(
-                            height: 10.0,
-                          ),
-                          Text(
-                            _availabilitySelected,
-                            style: TextStyle(
-                              fontWeight: FontWeight.bold,
-                              fontSize: 20.0,
-                              color: Colors.amberAccent[700],
-                            ),
-                          ),
-                        ],
-                      ),
-                    ),
-                    Container(
-                      child: Column(
-                        children: <Widget>[
-                          Container(
-                            padding: EdgeInsets.only(top: 20.0),
-                            child: DropdownButton(
-                              hint: Text(
-                                'Choose gender',
-                                style: TextStyle(
-                                  color: Colors.black,
-                                ),
-                              ),
-                              iconSize: 40.0,
-                              items: _gender.map((val) {
-                                return new DropdownMenuItem<String>(
-                                  value: val,
-                                  child: new Text(val),
-                                );
-                              }).toList(),
-                              onChanged: (newValue) {
-                                setState(() {
-                                  _genderSelected = newValue;
-                                  this._genderCategorySelected = true;
-                                });
-                              },
-                            ),
-                          ),
-                          SizedBox(
-                            height: 10.0,
-                          ),
-                          Text(
-                            _genderSelected,
-                            style: TextStyle(
-                              fontWeight: FontWeight.bold,
-                              fontSize: 20.0,
-                              color: Colors.amberAccent[700],
-                            ),
-                          ),
-                        ],
+                        ),
+                        validator: (value) =>
+                            value.isEmpty ? "Phone no. can't be empty" : null,
+                        onSaved: (value) => _emergency = value,
                       ),
                     ),
                     RaisedButton(
