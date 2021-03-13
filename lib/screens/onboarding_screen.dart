@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:shehacks_team_055/screens/signup_screen.dart';
 import 'package:shehacks_team_055/utilities/styles.dart';
 
 class OnboardingScreen extends StatefulWidget {
+  static const routeName = '/home_onboard';
   @override
   _OnboardingScreenState createState() => _OnboardingScreenState();
 }
@@ -52,7 +54,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
             ],
           )),
           child: Padding(
-            padding: EdgeInsets.symmetric(vertical: 40.0),
+            padding: EdgeInsets.symmetric(vertical: 10.0),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.stretch,
               children: <Widget>[
@@ -209,7 +211,10 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
               width: double.infinity,
               color: Colors.white,
               child: GestureDetector(
-                onTap: () => print('Get started'),
+                onTap: () {
+                  Navigator.pushReplacement(context,
+                      MaterialPageRoute(builder: (context) => SignupScreen()));
+                },
                 child: Center(
                   child: Padding(
                     padding: EdgeInsets.only(bottom: 30.0),

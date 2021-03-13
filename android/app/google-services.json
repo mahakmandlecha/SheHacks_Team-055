@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "815399135342",
+    "project_id": "shehacks-82d28",
+    "storage_bucket": "shehacks-82d28.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:815399135342:android:9651be69776d4222571e7f",
+        "android_client_info": {
+          "package_name": "com.example.shehacks_team_055"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "815399135342-akp150pvbpureaiag3jh5dt0cpean6dj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAnsO8i4KNNS9LiCRmtEUtwnhOAeDEr9cs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "815399135342-akp150pvbpureaiag3jh5dt0cpean6dj.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
