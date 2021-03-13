@@ -208,6 +208,11 @@ class _HomePageState extends State<HomePage> {
                       //   data.img,
                       //   width: 42,
                       // ),
+                      Icon(
+                        Icons.call,
+                        color: Color(0xFF5B16D0),
+                        size: 80.0,
+                      ),
                       SizedBox(
                         height: 14,
                       ),
@@ -217,7 +222,7 @@ class _HomePageState extends State<HomePage> {
                         style: GoogleFonts.openSans(
                             textStyle: TextStyle(
                                 color: Color(0xFF5B16D0),
-                                fontSize: 16,
+                                fontSize: 14,
                                 fontWeight: FontWeight.w600)),
                       ),
                     ],
@@ -248,6 +253,11 @@ class _HomePageState extends State<HomePage> {
                       //   data.img,
                       //   width: 42,
                       // ),
+                      Icon(
+                        Icons.call,
+                        color: Color(0xFF5B16D0),
+                        size: 80.0,
+                      ),
                       SizedBox(
                         height: 14,
                       ),
@@ -257,7 +267,7 @@ class _HomePageState extends State<HomePage> {
                         style: GoogleFonts.openSans(
                             textStyle: TextStyle(
                                 color: Color(0xFF5B16D0),
-                                fontSize: 16,
+                                fontSize: 14,
                                 fontWeight: FontWeight.w600)),
                       ),
                     ],
@@ -289,6 +299,11 @@ class _HomePageState extends State<HomePage> {
                       //   data.img,
                       //   width: 42,
                       // ),
+                      Icon(
+                        Icons.notification_important_rounded,
+                        color: Color(0xFF5B16D0),
+                        size: 80.0,
+                      ),
                       SizedBox(
                         height: 14,
                       ),
@@ -298,7 +313,7 @@ class _HomePageState extends State<HomePage> {
                         style: GoogleFonts.openSans(
                             textStyle: TextStyle(
                                 color: Color(0xFF5B16D0),
-                                fontSize: 16,
+                                fontSize: 14,
                                 fontWeight: FontWeight.w600)),
                       ),
                     ],
@@ -330,6 +345,11 @@ class _HomePageState extends State<HomePage> {
                       //   data.img,
                       //   width: 42,
                       // ),
+                      Icon(
+                        Icons.play_circle_fill_rounded,
+                        color: Color(0xFF5B16D0),
+                        size: 80.0,
+                      ),
                       SizedBox(
                         height: 14,
                       ),
@@ -339,7 +359,7 @@ class _HomePageState extends State<HomePage> {
                         style: GoogleFonts.openSans(
                             textStyle: TextStyle(
                                 color: Color(0xFF5B16D0),
-                                fontSize: 16,
+                                fontSize: 14,
                                 fontWeight: FontWeight.w600)),
                       ),
                     ],
@@ -370,6 +390,11 @@ class _HomePageState extends State<HomePage> {
                       //   data.img,
                       //   width: 42,
                       // ),
+                      Icon(
+                        Icons.edit_location_rounded,
+                        color: Color(0xFF5B16D0),
+                        size: 80.0,
+                      ),
                       SizedBox(
                         height: 14,
                       ),
@@ -379,7 +404,7 @@ class _HomePageState extends State<HomePage> {
                         style: GoogleFonts.openSans(
                             textStyle: TextStyle(
                                 color: Color(0xFF5B16D0),
-                                fontSize: 16,
+                                fontSize: 14,
                                 fontWeight: FontWeight.w600)),
                       ),
                     ],
@@ -411,6 +436,11 @@ class _HomePageState extends State<HomePage> {
                       //   data.img,
                       //   width: 42,
                       // ),
+                      Icon(
+                        Icons.lightbulb,
+                        color: Color(0xFF5B16D0),
+                        size: 80.0,
+                      ),
                       SizedBox(
                         height: 14,
                       ),
@@ -420,7 +450,7 @@ class _HomePageState extends State<HomePage> {
                         style: GoogleFonts.openSans(
                             textStyle: TextStyle(
                                 color: Color(0xFF5B16D0),
-                                fontSize: 16,
+                                fontSize: 14,
                                 fontWeight: FontWeight.w600)),
                       ),
                     ],
@@ -454,6 +484,11 @@ class _HomePageState extends State<HomePage> {
                       //   data.img,
                       //   width: 42,
                       // ),
+                      Icon(
+                        Icons.fitness_center_rounded,
+                        color: Color(0xFF5B16D0),
+                        size: 80.0,
+                      ),
                       SizedBox(
                         height: 14,
                       ),
@@ -463,7 +498,7 @@ class _HomePageState extends State<HomePage> {
                         style: GoogleFonts.openSans(
                             textStyle: TextStyle(
                                 color: Color(0xFF5B16D0),
-                                fontSize: 16,
+                                fontSize: 14,
                                 fontWeight: FontWeight.w600)),
                       ),
                     ],

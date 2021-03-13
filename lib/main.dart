@@ -10,6 +10,8 @@ import 'package:shehacks_team_055/screens/register.dart';
 import 'package:shehacks_team_055/screens/signup_screen.dart';
 import 'package:shehacks_team_055/screens/slide.dart';
 
+import 'screens/homepage.dart';
+import 'screens/onboarding_screen.dart';
 import 'screens/onboarding_screen.dart';
 //import 'package:app_onboarding/screens/onboarding_screen.dart';
 
