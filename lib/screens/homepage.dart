@@ -6,6 +6,7 @@ import 'package:geolocator/geolocator.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:latlng/latlng.dart';
 import 'package:shehacks_team_055/mainfunctionality/learnselfdefence.dart';
+import 'package:shehacks_team_055/mainfunctionality/playfakecall.dart';
 import 'package:shehacks_team_055/mainfunctionality/safetytips.dart';
 import 'package:shehacks_team_055/screens/appBar.dart';
 import 'package:shehacks_team_055/screens/auth.dart';
@@ -161,7 +162,7 @@ class _HomePageState extends State<HomePage> {
               child: GestureDetector(
                 onTap: () {},
                 child: Icon(
-                  Icons.search,
+                  Icons.logout,
                   size: 26.0,
                 ),
               )),
@@ -264,7 +265,10 @@ class _HomePageState extends State<HomePage> {
                 ),
               ),
               GestureDetector(
-                onTap: () {},
+                onTap: () {
+                  _playSiren(
+                      "https://drive.google.com/file/d/12NOzQzsKXRD3vmf0GRc1aCzoX4U-7QpV/view?usp=sharing");
+                },
                 child: Container(
                   decoration: BoxDecoration(
                     color: Colors.white,
@@ -302,6 +306,10 @@ class _HomePageState extends State<HomePage> {
                 ),
               ),
               GestureDetector(
+                onTap: () {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => PlayFakeCall()));
+                },
                 child: Container(
                   decoration: BoxDecoration(
                     color: Colors.white,
@@ -492,5 +500,14 @@ void _sendSMS(number, location) async {
     await launch(uri);
   } else {
     throw 'Could not launch $uri';
+  }
+}
+
+_playSiren(link) async {
+  var url = link;
+  if (await canLaunch(url)) {
+    await launch(url);
+  } else {
+    throw 'Could not launch $url';
   }
 }

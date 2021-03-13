@@ -9,6 +9,8 @@ import 'package:shehacks_team_055/screens/onboarding_screen.dart';
 import 'package:shehacks_team_055/screens/register.dart';
 import 'package:shehacks_team_055/screens/signup_screen.dart';
 import 'package:shehacks_team_055/screens/slide.dart';
+
+import 'screens/onboarding_screen.dart';
 //import 'package:app_onboarding/screens/onboarding_screen.dart';
 
 void main() async {
@@ -36,7 +38,7 @@ class MyApp extends StatelessWidget {
             fontFamily: "GoogleSans",
             primarySwatch: Colors.amberAccent[600],
           ),
-          home: HomePage(),
+          home: OnboardingScreen(),
           routes: {
             SignupScreen.routeName: (ctx) => SignupScreen(),
             LoginScreen.routeName: (ctx) => LoginScreen(),
