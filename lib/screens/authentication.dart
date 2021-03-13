@@ -10,7 +10,7 @@ class Authentication with ChangeNotifier {
         'https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=AIzaSyAnsO8i4KNNS9LiCRmtEUtwnhOAeDEr9cs';
 
     try {
-      final response = await http.post(Uri.https(url, ""),
+      final response = await http.post(Uri.parse(url),
           body: json.encode({
             'email': email,
             'password': password,
@@ -31,7 +31,7 @@ class Authentication with ChangeNotifier {
         'https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=AIzaSyAnsO8i4KNNS9LiCRmtEUtwnhOAeDEr9cs';
 
     try {
-      final response = await http.post(Uri.https(url, ""),
+      final response = await http.post(Uri.parse(url),
           body: json.encode({
             'email': email,
             'password': password,

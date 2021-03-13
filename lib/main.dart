@@ -30,7 +30,7 @@ class MyApp extends StatelessWidget {
           )
         ],
         child: MaterialApp(
-          title: 'Plasma',
+          title: 'SheHacks',
           debugShowCheckedModeBanner: false,
           theme: ThemeData(
             fontFamily: "GoogleSans",
