@@ -10,7 +10,7 @@ class OnboardingScreen extends StatefulWidget {
 }
 
 class _OnboardingScreenState extends State<OnboardingScreen> {
-  final int _numPages = 3;
+  final int _numPages = 4;
   final PageController _pageController = PageController(initialPage: 0);
   int _currentPage = 0;
 
@@ -91,20 +91,20 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                           children: <Widget>[
                             Center(
                               child: Image(
-                                image:
-                                    AssetImage('assets/images/onboarding0.png'),
+                                image: AssetImage(
+                                    'assets/images/emergency_call.png'),
                                 height: 250.0,
                                 width: 250.0,
                               ),
                             ),
                             SizedBox(height: 30.0),
                             Text(
-                              'Keep yourself safe',
+                              'Emergency call- One touch away',
                               style: kTitleStyle,
                             ),
                             SizedBox(height: 15.0),
                             Text(
-                              'Lorem ipsum dolor sit amet, consect adipiscing elit, sed do eiusmod tempor incididunt ut labore et.',
+                              'A single tap on our call icon can get you an urgent help from your emergency contact.',
                               style: kSubtitleStyle,
                             )
                           ],
@@ -118,7 +118,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                             Center(
                               child: Image(
                                 image: AssetImage(
-                                  'assets/images/onboarding1.png',
+                                  'assets/images/self-defense_guide.png',
                                 ),
                                 height: 250.0,
                                 width: 250.0,
@@ -126,12 +126,12 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                             ),
                             SizedBox(height: 30.0),
                             Text(
-                              'Learn self defence',
+                              'Wanna be a warrior?',
                               style: kTitleStyle,
                             ),
                             SizedBox(height: 15.0),
                             Text(
-                              'Lorem ipsum dolor sit amet, consect adipiscing elit, sed do eiusmod tempor incididunt ut labore et.',
+                              'Learn and follow our self defense guidelines and tips to be your own warrior',
                               style: kSubtitleStyle,
                             ),
                           ],
@@ -145,7 +145,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                             Center(
                               child: Image(
                                 image: AssetImage(
-                                  'assets/images/onboarding2.png',
+                                  'assets/images/fake-audio-icon.png',
                                 ),
                                 height: 250.0,
                                 width: 250.0,
@@ -153,12 +153,39 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                             ),
                             SizedBox(height: 30.0),
                             Text(
-                              'Safety is the first priority',
+                              'Network lost? Pretend a fake call',
                               style: kTitleStyle,
                             ),
                             SizedBox(height: 15.0),
                             Text(
-                              'Lorem ipsum dolor sit amet, consect adipiscing elit, sed do eiusmod tempor incididunt ut labore et.',
+                              'Our fake audio feature allows you to make a pretentious call using autosaved audios. All you need is to reply to the fake audio person\'s questions.',
+                              style: kSubtitleStyle,
+                            ),
+                          ],
+                        ),
+                      ),
+                      Padding(
+                        padding: EdgeInsets.all(40.0),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: <Widget>[
+                            Center(
+                              child: Image(
+                                image: AssetImage(
+                                  'assets/images/police-siren.png',
+                                ),
+                                height: 250.0,
+                                width: 250.0,
+                              ),
+                            ),
+                            SizedBox(height: 30.0),
+                            Text(
+                              'Play the siren',
+                              style: kTitleStyle,
+                            ),
+                            SizedBox(height: 15.0),
+                            Text(
+                              'Is someone bothering you on a deserted road? Play this siren and save yourself from an uncertain unsafe situation',
                               style: kSubtitleStyle,
                             ),
                           ],
