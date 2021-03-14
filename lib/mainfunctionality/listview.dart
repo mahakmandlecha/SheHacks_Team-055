@@ -1,110 +1,212 @@
-// import 'package:flutter/material.dart';
+import 'package:flutter/material.dart';
 
-// class ListView extends StatelessWidget {
-//   @override
-//   Widget build(BuildContext context) {
-//     Widget titleSection = Container(
-//       padding: const EdgeInsets.all(32),
-//       child: Row(
-//         children: [
-//           Expanded(
-//             child: Column(
-//               crossAxisAlignment: CrossAxisAlignment.start,
-//               children: [
-//                 Container(
-//                   padding: const EdgeInsets.only(bottom: 8),
-//                   child: Text(
-//                     'Oeschinen Lake Campground',
-//                     style: TextStyle(
-//                       fontWeight: FontWeight.bold,
-//                     ),
-//                   ),
-//                 ),
-//                 Text(
-//                   'Kandersteg, Switzerland',
-//                   style: TextStyle(
-//                     color: Colors.grey[500],
-//                   ),
-//                 ),
-//               ],
-//             ),
-//           ),
-//           Icon(
-//             Icons.star,
-//             color: Colors.red[500],
-//           ),
-//           Text('41'),
-//         ],
-//       ),
-//     );
+import '../screens/appBar.dart';
+// Uncomment lines 7 and 10 to view the visual layout at runtime.
+// import 'package:flutter/rendering.dart' show debugPaintSizeEnabled;
 
-//     Color color = Theme.of(context).primaryColor;
+class Shop extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    Color color = Color(0xFF5B16D0);
 
-//     Widget buttonSection = Container(
-//       child: Row(
-//         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-//         children: [
-//           _buildButtonColumn(color, Icons.call, 'CALL'),
-//           _buildButtonColumn(color, Icons.near_me, 'ROUTE'),
-//           _buildButtonColumn(color, Icons.share, 'SHARE'),
-//         ],
-//       ),
-//     );
+    Widget buttonSection = Container(
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        children: [
+          _buildButtonColumn(color, Icons.favorite, 'LIKE'),
+          _buildButtonColumn(color, Icons.near_me, 'SHARE'),
+          _buildButtonColumn(color, Icons.shopping_cart_rounded, 'BUY'),
+        ],
+      ),
+    );
 
-//     Widget textSection = Container(
-//       padding: const EdgeInsets.all(32),
-//       child: Text(
-//         'Lake Oeschinen lies at the foot of the Blüemlisalp in the Bernese '
-//         'Alps. Situated 1,578 meters above sea level, it is one of the '
-//         'larger Alpine Lakes. A gondola ride from Kandersteg, followed by a '
-//         'half-hour walk through pastures and pine forest, leads you to the '
-//         'lake, which warms to 20 degrees Celsius in the summer. Activities '
-//         'enjoyed here include rowing, and riding the summer toboggan run.',
-//         softWrap: true,
-//       ),
-//     );
+    return MaterialApp(
+      home: Scaffold(
+        appBar: AppBar(
+          centerTitle: true,
+          title: AppLogo(),
+          brightness: Brightness.light,
+          elevation: 0.0,
+          backgroundColor: Color(0xFF5B16D0),
+        ),
+        body: ListView(
+          children: [
+            Image.asset(
+              'assets/images/comb-knife.PNG',
+              width: 600,
+              height: 240,
+              fit: BoxFit.cover,
+            ),
+            Container(
+              padding: const EdgeInsets.all(32),
+              child: Row(
+                children: [
+                  Expanded(
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Container(
+                          padding: const EdgeInsets.only(bottom: 5),
+                          child: Text(
+                            'Hidden Comb Knife',
+                            style: TextStyle(
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                  Icon(
+                    Icons.star,
+                    color: Colors.yellow[900],
+                  ),
+                  Text('100'),
+                ],
+              ),
+            ),
+            buttonSection,
+            SizedBox(
+              height: 10.0,
+            ),
+            Image.asset(
+              'assets/images/pepper-spray.PNG',
+              width: 600,
+              height: 240,
+              fit: BoxFit.cover,
+            ),
+            Container(
+              padding: const EdgeInsets.all(32),
+              child: Row(
+                children: [
+                  Expanded(
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Container(
+                          padding: const EdgeInsets.only(bottom: 8),
+                          child: Text(
+                            'Pepper Spray',
+                            style: TextStyle(
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                  Icon(
+                    Icons.star,
+                    color: Colors.red[500],
+                  ),
+                  Text('41'),
+                ],
+              ),
+            ),
+            buttonSection,
+            SizedBox(
+              height: 10.0,
+            ),
+            Image.asset(
+              'assets/images/safety-ring.PNG',
+              width: 600,
+              height: 240,
+              fit: BoxFit.cover,
+            ),
+            Container(
+              padding: const EdgeInsets.all(32),
+              child: Row(
+                children: [
+                  Expanded(
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Container(
+                          padding: const EdgeInsets.only(bottom: 8),
+                          child: Text(
+                            'Safety Rings',
+                            style: TextStyle(
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                  Icon(
+                    Icons.star,
+                    color: Colors.red[500],
+                  ),
+                  Text('52'),
+                ],
+              ),
+            ),
+            buttonSection,
+            SizedBox(
+              height: 10.0,
+            ),
+            Image.asset(
+              'assets/images/keychain.PNG',
+              width: 600,
+              height: 300,
+              fit: BoxFit.cover,
+            ),
+            Container(
+              padding: const EdgeInsets.all(32),
+              child: Row(
+                children: [
+                  Expanded(
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Container(
+                          padding: const EdgeInsets.only(bottom: 8),
+                          child: Text(
+                            'Self defence toothpick',
+                            style: TextStyle(
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                  Icon(
+                    Icons.star,
+                    color: Colors.red[500],
+                  ),
+                  Text('80'),
+                ],
+              ),
+            ),
+            buttonSection,
+            SizedBox(
+              height: 10.0,
+            ),
+          ],
+        ),
+      ),
+    );
+  }
 
-//     return MaterialApp(
-//       title: 'Flutter layout demo',
-//       home: Scaffold(
-//         appBar: AppBar(
-//           title: Text('Flutter layout demo'),
-//         ),
-//         body: ListView(
-//           children: [
-//             Image.asset(
-//               'images/lake.jpg',
-//               width: 600,
-//               height: 240,
-//               fit: BoxFit.cover,
-//             ),
-//             titleSection,
-//             buttonSection,
-//             textSection,
-//           ],
-//         ),
-//       ),
-//     );
-//   }
-
-//   Column _buildButtonColumn(Color color, IconData icon, String label) {
-//     return Column(
-//       mainAxisSize: MainAxisSize.min,
-//       mainAxisAlignment: MainAxisAlignment.center,
-//       children: [
-//         Icon(icon, color: color),
-//         Container(
-//           margin: const EdgeInsets.only(top: 8),
-//           child: Text(
-//             label,
-//             style: TextStyle(
-//               fontSize: 12,
-//               fontWeight: FontWeight.w400,
-//               color: color,
-//             ),
-//           ),
-//         ),
-//       ],
-//     );
-//   }
-// }
+  Column _buildButtonColumn(Color color, IconData icon, String label) {
+    return Column(
+      mainAxisSize: MainAxisSize.min,
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: [
+        Icon(icon, color: color),
+        Container(
+          margin: const EdgeInsets.only(top: 8),
+          child: Text(
+            label,
+            style: TextStyle(
+              fontSize: 12,
+              fontWeight: FontWeight.w400,
+              color: color,
+            ),
+          ),
+        ),
+      ],
+    );
+  }
+}

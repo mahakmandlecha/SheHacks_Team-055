@@ -16,6 +16,8 @@ import 'package:shehacks_team_055/screens/login_screen.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:geocoder/geocoder.dart';
 
+import '../mainfunctionality/listview.dart';
+
 class HomePage extends StatefulWidget {
   static const routeName = '/home';
 
@@ -103,17 +105,17 @@ class _HomePageState extends State<HomePage> {
   );
 
   Items item2 = new Items(
-    title: "Call Women helpline",
+    title: "Call women helpline",
     //img: "assets/food.png",
   );
 
   Items item3 = new Items(
-    title: "Play Siren",
+    title: "Play police siren",
     //img: "assets/map.png",
   );
 
   Items item4 = new Items(
-    title: "Play Recorded call",
+    title: "Play recorded call",
     //img: "assets/festival.png",
   );
 
@@ -132,6 +134,11 @@ class _HomePageState extends State<HomePage> {
     //  img: "assets/setting.png",
   );
 
+  Items item8 = new Items(
+    title: "Buy safety tools",
+    //  img: "assets/setting.png",
+  );
+
   @override
   Widget build(BuildContext context) {
     return _child;
@@ -146,6 +153,7 @@ class _HomePageState extends State<HomePage> {
       item5,
       item6,
       item7,
+      item8,
       // item8,
     ];
     var _police = "1090";
@@ -494,6 +502,52 @@ class _HomePageState extends State<HomePage> {
                       ),
                       Text(
                         item7.title,
+                        textAlign: TextAlign.center,
+                        style: GoogleFonts.openSans(
+                            textStyle: TextStyle(
+                                color: Color(0xFF5B16D0),
+                                fontSize: 14,
+                                fontWeight: FontWeight.w600)),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+              GestureDetector(
+                onTap: () {
+                  Navigator.push(
+                      context, MaterialPageRoute(builder: (context) => Shop()));
+                },
+                child: Container(
+                  decoration: BoxDecoration(
+                    color: Colors.white,
+                    borderRadius: BorderRadius.circular(10),
+                    boxShadow: [
+                      BoxShadow(
+                        color: Colors.grey.withOpacity(0.5),
+                        spreadRadius: 1,
+                        blurRadius: 4,
+                        offset: Offset(0, 3), // changes position of shadow
+                      ),
+                    ],
+                  ),
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: <Widget>[
+                      // Image.asset(
+                      //   data.img,
+                      //   width: 42,
+                      // ),
+                      Icon(
+                        Icons.shopping_cart_rounded,
+                        color: Color(0xFF5B16D0),
+                        size: 80.0,
+                      ),
+                      SizedBox(
+                        height: 14,
+                      ),
+                      Text(
+                        item8.title,
                         textAlign: TextAlign.center,
                         style: GoogleFonts.openSans(
                             textStyle: TextStyle(

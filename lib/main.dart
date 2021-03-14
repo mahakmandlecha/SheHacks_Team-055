@@ -11,6 +11,7 @@ import 'package:shehacks_team_055/screens/signup_screen.dart';
 import 'package:shehacks_team_055/screens/slide.dart';
 
 import 'screens/homepage.dart';
+import 'screens/homepage.dart';
 import 'screens/onboarding_screen.dart';
 import 'screens/onboarding_screen.dart';
 //import 'package:app_onboarding/screens/onboarding_screen.dart';
@@ -40,7 +41,7 @@ class MyApp extends StatelessWidget {
             fontFamily: "GoogleSans",
             primarySwatch: Colors.amberAccent[600],
           ),
-          home: OnboardingScreen(),
+          home: HomePage(),
           routes: {
             SignupScreen.routeName: (ctx) => SignupScreen(),
             LoginScreen.routeName: (ctx) => LoginScreen(),
