@@ -168,7 +168,9 @@ class _HomePageState extends State<HomePage> {
           Padding(
               padding: EdgeInsets.only(right: 20.0),
               child: GestureDetector(
-                onTap: () {},
+                onTap: () {
+                  signOut();
+                },
                 child: Icon(
                   Icons.logout,
                   size: 26.0,

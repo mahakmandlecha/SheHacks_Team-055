@@ -14,6 +14,7 @@ import 'screens/homepage.dart';
 import 'screens/homepage.dart';
 import 'screens/onboarding_screen.dart';
 import 'screens/onboarding_screen.dart';
+import 'screens/onboarding_screen.dart';
 //import 'package:app_onboarding/screens/onboarding_screen.dart';
 
 void main() async {
@@ -41,7 +42,7 @@ class MyApp extends StatelessWidget {
             fontFamily: "GoogleSans",
             primarySwatch: Colors.amberAccent[600],
           ),
-          home: HomePage(),
+          home: OnboardingScreen(),
           routes: {
             SignupScreen.routeName: (ctx) => SignupScreen(),
             LoginScreen.routeName: (ctx) => LoginScreen(),
