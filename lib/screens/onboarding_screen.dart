@@ -26,8 +26,8 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
     return AnimatedContainer(
       duration: Duration(milliseconds: 150),
       margin: EdgeInsets.symmetric(horizontal: 8.0),
-      height: 8.0,
-      width: isActive ? 24.0 : 16.0,
+      height: 5.0,
+      width: isActive ? 16.0 : 16.0,
       decoration: BoxDecoration(
         color: isActive ? Colors.white : Color(0xFF7B51D3),
         borderRadius: BorderRadius.all(Radius.circular(12)),
@@ -212,7 +212,8 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
       ),
       bottomSheet: _currentPage == _numPages - 1
           ? Container(
-              height: 100.0,
+              height: 70.0,
+              padding: EdgeInsets.only(top: 11.0),
               width: double.infinity,
               color: Colors.white,
               child: GestureDetector(

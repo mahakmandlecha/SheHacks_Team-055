@@ -108,7 +108,7 @@ class _RegisterPageState extends State<RegisterPage> {
   Widget build(BuildContext context) {
     SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
       statusBarColor: Colors.transparent, //top bar color
-      systemNavigationBarColor: Colors.black, //bottom bar color
+      systemNavigationBarColor: Color(0xFF5B16D0), //bottom bar color
       systemNavigationBarIconBrightness: Brightness.dark,
     ));
     return Scaffold(
@@ -116,7 +116,7 @@ class _RegisterPageState extends State<RegisterPage> {
       appBar: AppBar(
         elevation: 0.0,
         centerTitle: true,
-        backgroundColor: Colors.amberAccent[700],
+        backgroundColor: Color(0xFF5B16D0),
         title: Text(
           "Register",
         ),
@@ -138,9 +138,12 @@ class _RegisterPageState extends State<RegisterPage> {
                       child: TextFormField(
                         decoration: InputDecoration(
                           hintText: 'Name',
+                          focusedBorder: UnderlineInputBorder(
+                            borderSide: BorderSide(color: Color(0xFF5B16D0)),
+                          ),
                           icon: Icon(
                             FontAwesomeIcons.user,
-                            color: Colors.amberAccent[700],
+                            color: Color(0xFF5B16D0),
                           ),
                         ),
                         validator: (value) =>
@@ -153,9 +156,12 @@ class _RegisterPageState extends State<RegisterPage> {
                       child: TextFormField(
                         decoration: InputDecoration(
                           hintText: 'Email ID',
+                          focusedBorder: UnderlineInputBorder(
+                            borderSide: BorderSide(color: Color(0xFF5B16D0)),
+                          ),
                           icon: Icon(
                             FontAwesomeIcons.envelope,
-                            color: Colors.amberAccent[700],
+                            color: Color(0xFF5B16D0),
                           ),
                         ),
                         validator: (value) => value.isEmpty
@@ -169,9 +175,12 @@ class _RegisterPageState extends State<RegisterPage> {
                       child: TextFormField(
                         decoration: InputDecoration(
                           hintText: 'Password',
+                          focusedBorder: UnderlineInputBorder(
+                            borderSide: BorderSide(color: Color(0xFF5B16D0)),
+                          ),
                           icon: Icon(
                             FontAwesomeIcons.userLock,
-                            color: Colors.amberAccent[700],
+                            color: Color(0xFF5B16D0),
                           ),
                         ),
                         obscureText: true,
@@ -186,9 +195,12 @@ class _RegisterPageState extends State<RegisterPage> {
                       child: TextFormField(
                         decoration: InputDecoration(
                           hintText: 'Address',
+                          focusedBorder: UnderlineInputBorder(
+                            borderSide: BorderSide(color: Color(0xFF5B16D0)),
+                          ),
                           icon: Icon(
                             FontAwesomeIcons.addressBook,
-                            color: Colors.amberAccent[700],
+                            color: Color(0xFF5B16D0),
                           ),
                         ),
                         validator: (value) => value.isEmpty
@@ -203,9 +215,12 @@ class _RegisterPageState extends State<RegisterPage> {
                         keyboardType: TextInputType.phone,
                         decoration: InputDecoration(
                           hintText: 'Phone No.',
+                          focusedBorder: UnderlineInputBorder(
+                            borderSide: BorderSide(color: Color(0xFF5B16D0)),
+                          ),
                           icon: Icon(
                             FontAwesomeIcons.phone,
-                            color: Colors.amberAccent[700],
+                            color: Color(0xFF5B16D0),
                           ),
                         ),
                         validator: (value) =>
@@ -219,9 +234,12 @@ class _RegisterPageState extends State<RegisterPage> {
                         keyboardType: TextInputType.phone,
                         decoration: InputDecoration(
                           hintText: 'Emergency Contact.',
+                          focusedBorder: UnderlineInputBorder(
+                            borderSide: BorderSide(color: Color(0xFF5B16D0)),
+                          ),
                           icon: Icon(
                             FontAwesomeIcons.phone,
-                            color: Colors.amberAccent[700],
+                            color: Color(0xFF5B16D0),
                           ),
                         ),
                         validator: (value) =>
@@ -233,7 +251,7 @@ class _RegisterPageState extends State<RegisterPage> {
                       onPressed: () => validate_submit(context),
                       textColor: Colors.white,
                       padding: EdgeInsets.only(left: 5.0, right: 5.0),
-                      color: Colors.amberAccent[700],
+                      color: Color(0xFF5B16D0),
                       child: Text("REGISTER"),
                       shape: new RoundedRectangleBorder(
                           borderRadius: new BorderRadius.circular(30.0)),

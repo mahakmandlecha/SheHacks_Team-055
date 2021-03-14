@@ -56,6 +56,7 @@ class _SignupScreenState extends State<SignupScreen> {
     return Scaffold(
       appBar: AppBar(
         title: Text('Signup'),
+        backgroundColor: Color(0xFF5B16D0),
         actions: <Widget>[
           FlatButton(
             child: Row(
@@ -73,7 +74,7 @@ class _SignupScreenState extends State<SignupScreen> {
           Container(
             decoration: BoxDecoration(
                 gradient: LinearGradient(colors: [
-              Colors.yellow[100],
+              Colors.purple[100],
               Colors.blue[50],
             ])),
           ),
@@ -93,7 +94,12 @@ class _SignupScreenState extends State<SignupScreen> {
                       children: <Widget>[
                         //email
                         TextFormField(
-                          decoration: InputDecoration(labelText: 'Email'),
+                          decoration: InputDecoration(
+                            labelText: 'Email',
+                            focusedBorder: UnderlineInputBorder(
+                              borderSide: BorderSide(color: Color(0xFF5B16D0)),
+                            ),
+                          ),
                           keyboardType: TextInputType.emailAddress,
                           validator: (value) {
                             if (value.isEmpty || !value.contains('@')) {
@@ -108,7 +114,12 @@ class _SignupScreenState extends State<SignupScreen> {
 
                         //password
                         TextFormField(
-                          decoration: InputDecoration(labelText: 'Password'),
+                          decoration: InputDecoration(
+                            labelText: 'Password',
+                            focusedBorder: UnderlineInputBorder(
+                              borderSide: BorderSide(color: Color(0xFF5B16D0)),
+                            ),
+                          ),
                           obscureText: true,
                           controller: _passwordController,
                           validator: (value) {
@@ -124,8 +135,12 @@ class _SignupScreenState extends State<SignupScreen> {
 
                         //Confirm Password
                         TextFormField(
-                          decoration:
-                              InputDecoration(labelText: 'Confirm Password'),
+                          decoration: InputDecoration(
+                            labelText: 'Confirm Password',
+                            focusedBorder: UnderlineInputBorder(
+                              borderSide: BorderSide(color: Color(0xFF5B16D0)),
+                            ),
+                          ),
                           obscureText: true,
                           validator: (value) {
                             if (value.isEmpty ||
@@ -147,7 +162,7 @@ class _SignupScreenState extends State<SignupScreen> {
                           shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(30),
                           ),
-                          color: Colors.amberAccent[700],
+                          color: Color(0xFF5B16D0),
                           textColor: Colors.white,
                         )
                       ],
