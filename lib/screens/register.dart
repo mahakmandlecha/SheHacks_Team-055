@@ -224,7 +224,9 @@ class _RegisterPageState extends State<RegisterPage> {
                           ),
                         ),
                         validator: (value) =>
-                            value.isEmpty ? "Phone no. can't be empty" : null,
+                            value.isEmpty || value.length != 10
+                                ? "Enter correct phone number"
+                                : null,
                         onSaved: (value) => _phoneNumber = value,
                       ),
                     ),
@@ -243,7 +245,9 @@ class _RegisterPageState extends State<RegisterPage> {
                           ),
                         ),
                         validator: (value) =>
-                            value.isEmpty ? "Phone no. can't be empty" : null,
+                            value.isEmpty || value.length != 10
+                                ? "enter correct phone number"
+                                : null,
                         onSaved: (value) => _emergency = value,
                       ),
                     ),
